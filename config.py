@@ -1,11 +1,13 @@
-# TELEGRAM_BOT_TOKEN = "6363721955:AAEyulmzYj5hF45DPJV1TWLCw_hRj6Y_jx0"
-TELEGRAM_BOT_TOKEN="8191568471:AAEJzdr4hpf0Age1dt5pvBBT1KbYfi6LvAE"
-TELEGRAM_CHAT_ID = 740130054
+import os
+from dotenv import load_dotenv
 
-POLL_INTERVAL = 30  # секунд
-THRESHOLD_PERCENT = 1
+load_dotenv()  # Загружает переменные из .env
 
-# Биржи и пары для отслеживания
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
+POLL_INTERVAL = int(os.getenv("POLL_INTERVAL", 60))
+THRESHOLD_PERCENT = float(os.getenv("THRESHOLD_PERCENT", 1.0))
+
 TRACKING = {
     "binance": ["TON/USDT"],
 }
