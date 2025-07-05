@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4dd4cf45-c9df-4b34-afd8-439e248a8756" name="Changes" comment="add/requirement.txt">
-      <change afterPath="$PROJECT_DIR$/strategies/moving_average.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strategies/volume_spikes.py" afterDir="false" />
+    <list default="true" id="4dd4cf45-c9df-4b34-afd8-439e248a8756" name="Changes" comment="add/stratigies">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/checker.py" beforeDir="false" afterPath="$PROJECT_DIR$/checker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strategies/moving_average.py" beforeDir="false" afterPath="$PROJECT_DIR$/strategies/moving_average.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strategies/threshold.py" beforeDir="false" afterPath="$PROJECT_DIR$/strategies/threshold.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +54,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.main.executor": "Debug",
+    "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
@@ -143,7 +142,23 @@
       <option name="project" value="LOCAL" />
       <updated>1751682650695</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add/stratigies">
+      <option name="closed" value="true" />
+      <created>1751685899040</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1751685899040</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add/stratigies">
+      <option name="closed" value="true" />
+      <created>1751685946181</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1751685946181</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -153,18 +168,10 @@
     <MESSAGE value="first commit" />
     <MESSAGE value="Добавил .gitignore и удалил из индекса игнорируемые файлы" />
     <MESSAGE value="add/requirement.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="add/requirement.txt" />
+    <MESSAGE value="add/stratigies" />
+    <option name="LAST_COMMIT_MESSAGE" value="add/stratigies" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/checker.py</url>
-          <line>22</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
         <watch expression="last_prices" language="Python" />

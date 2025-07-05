@@ -1,3 +1,5 @@
+from datetime import time
+
 
 class ThresholdStrategy:
     def __init__(self, threshold_percent: float):
@@ -15,6 +17,9 @@ class ThresholdStrategy:
                 "old": old,
                 "new": current,
                 "diff": diff,
-                "direction": direction
+                "direction": direction,
+                "strategy": "ThresholdStrategy",
+                "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
+                # "volume": volume,  # если есть
             }]
         return []
