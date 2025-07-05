@@ -1,4 +1,4 @@
-from datetime import time
+import time
 
 
 class ThresholdStrategy:
@@ -9,6 +9,7 @@ class ThresholdStrategy:
         if old is None:
             return []
         diff = abs(current - old) / old * 100
+
         if diff >= self.threshold_percent:
             direction = "📈 выросла" if current > old else "📉 упала"
             return [{

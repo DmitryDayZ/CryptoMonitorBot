@@ -2,6 +2,8 @@ import asyncio
 import logging
 from config import TRACKING, POLL_INTERVAL, THRESHOLD_PERCENT
 from exchanges.ccxt_client import ExchangeManager
+from strategies.initial_threshold import InitialThresholdStrategy
+from strategies.moving_average import MovingAverageCrossStrategy
 from strategies.volume_spikes import VolumeSpikeStrategy
 from telegram_bot import send_price_alert
 from strategies.threshold import ThresholdStrategy
@@ -14,8 +16,9 @@ last_prices = {}  # Словарь для хранения последних ц
 ex = ExchangeManager()  # Менеджер для работы с биржами через ccxt
 
 strategies = [
-    ThresholdStrategy(THRESHOLD_PERCENT),
-    VolumeSpikeStrategy(spike_percent=1),  # например, 50%
+    InitialThresholdStrategy(THRESHOLD_PERCENT),
+    VolumeSpikeStrategy(spike_percent=0.1),  # например, 50%
+    MovingAverageCrossStrategy(fast_period=5, slow_period=20),
     # другие стратегии
 ]
 
@@ -31,7 +34,9 @@ async def check_prices():
                     key = f"{exchange}_{symbol}"
                     old = last_prices.get(key)
                     for strategy in strategies:
-                        if isinstance(strategy, VolumeSpikeStrategy):
+                        if isinstance(strategy, InitialThresholdStrategy):
+                            alerts = await strategy.check(exchange, symbol, current)
+                        elif isinstance(strategy, VolumeSpikeStrategy):
                             alerts = await strategy.check(exchange, symbol, old, current, volume)
                         else:
                             alerts = await strategy.check(exchange, symbol, old, current)

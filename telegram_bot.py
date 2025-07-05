@@ -3,7 +3,17 @@ from config import TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID
 
 bot = Bot(token=TELEGRAM_BOT_TOKEN)
 
-async def send_price_alert(exchange, pair, old, new, diff, direction):
+async def send_price_alert(exchange, pair, old, new, diff, direction, timestamp, strategy=None):
+    message = (
+        f"{exchange} {pair}\n"
+        f"Старая цена: {old}\n"
+        f"Новая цена: {new}\n"
+        f"Изменение: {diff:.2f}% {direction}\n"
+        f"Время: {timestamp}"
+    )
+    if strategy:
+        message += f"\nСтратегия: {strategy}"
+
     sign = "+" if new > old else "-"
 
     text = (

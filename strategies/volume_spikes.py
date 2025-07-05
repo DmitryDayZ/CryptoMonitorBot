@@ -1,3 +1,6 @@
+import time
+
+
 class VolumeSpikeStrategy:
     def __init__(self, spike_percent: float):
         self.spike_percent = spike_percent
@@ -14,7 +17,9 @@ class VolumeSpikeStrategy:
                 "pair": symbol,
                 "old_volume": old_volume,
                 "new_volume": volume,
-                "direction": direction
+                "direction": direction,
+                "strategy": "VolumeSpikeStrategy",
+                "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
             })
         self.last_volume[key] = volume
         return alerts
