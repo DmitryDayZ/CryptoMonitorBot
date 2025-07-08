@@ -14,9 +14,9 @@ class ThresholdStrategy:
             direction = "📈 выросла" if current > old else "📉 упала"
             return [{
                 "exchange": exchange,
-                "pair": symbol,
-                "old": old,
-                "new": current,
+                "symbol": symbol,
+                "old_price": old,
+                "new_price": current,
                 "diff": diff,
                 "direction": direction,
                 "strategy": "ThresholdStrategy",

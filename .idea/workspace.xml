@@ -4,14 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4dd4cf45-c9df-4b34-afd8-439e248a8756" name="Changes" comment="add/strategies2">
-      <change afterPath="$PROJECT_DIR$/strategies/initial_threshold.py" afterDir="false" />
+    <list default="true" id="4dd4cf45-c9df-4b34-afd8-439e248a8756" name="Changes" comment="add/strategies3">
+      <change afterPath="$PROJECT_DIR$/db/sqlite_module.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/emulation/testing.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/history.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/order_manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/portfolio.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/strategies/martingale_strategy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/strategies/static_initial_threshold.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tgbot/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tgbot/handlers/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tgbot/handlers/user.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tgbot/keyboards/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tgbot/keyboards/inline.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checker.py" beforeDir="false" afterPath="$PROJECT_DIR$/checker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/checker.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/checker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/tgbot/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exchanges/ccxt_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/exchanges/ccxt_client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strategies/initial_threshold.py" beforeDir="false" afterPath="$PROJECT_DIR$/strategies/initial_threshold.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strategies/moving_average.py" beforeDir="false" afterPath="$PROJECT_DIR$/strategies/moving_average.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/strategies/threshold.py" beforeDir="false" afterPath="$PROJECT_DIR$/strategies/threshold.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/strategies/volume_spikes.py" beforeDir="false" afterPath="$PROJECT_DIR$/strategies/volume_spikes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/telegram_bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/telegram_bot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/telegram_bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/tgbot/telegram_bot.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +81,14 @@
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/strategies" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/services" />
+      <recent name="$PROJECT_DIR$/bot" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="CryptoMonitorBot" />
@@ -169,7 +193,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751686757368</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="add/strategies3">
+      <option name="closed" value="true" />
+      <created>1751691968217</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1751691968217</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -192,26 +224,38 @@
     <MESSAGE value="add/requirement.txt" />
     <MESSAGE value="add/stratigies" />
     <MESSAGE value="add/stratigies2" />
-    <option name="LAST_COMMIT_MESSAGE" value="add/stratigies2" />
+    <MESSAGE value="add/strategies3" />
+    <option name="LAST_COMMIT_MESSAGE" value="add/strategies3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/strategies/initial_threshold.py</url>
-          <line>19</line>
-          <option name="timeStamp" value="8" />
+          <url>file://$PROJECT_DIR$/strategies/volume_spikes.py</url>
+          <line>10</line>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/checker.py</url>
-          <line>15</line>
-          <option name="timeStamp" value="9" />
+          <url>file://$PROJECT_DIR$/tgbot/handlers/user.py</url>
+          <line>24</line>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/services/checker.py</url>
+          <line>49</line>
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/services/checker.py</url>
+          <line>297</line>
+          <option name="timeStamp" value="105" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
-        <watch expression="self.initial_prices" language="Python" />
+        <watch expression="sell_price" language="Python" />
+        <watch expression="close" language="Python" />
       </configuration>
     </watches-manager>
   </component>

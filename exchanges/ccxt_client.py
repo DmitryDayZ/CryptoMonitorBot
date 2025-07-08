@@ -1,4 +1,5 @@
-import ccxt
+
+import ccxt.async_support as ccxt
 
 class ExchangeManager:
     def __init__(self):
@@ -7,7 +8,12 @@ class ExchangeManager:
             "bybit": ccxt.bybit(),
         }
 
-    def fetch_price(self, exchange_name: str, symbol: str) -> float:
+    async def fetch_price(self, exchange_name: str, symbol: str) -> float:
         ex = self.exchanges[exchange_name]
-        ticker = ex.fetch_ticker(symbol)
+        ticker = await ex.fetch_ticker(symbol)
         return ticker['last']
+
+    async def close_all(self):
+        # Закрыть соединения с биржами
+        for ex in self.exchanges.values():
+            await ex.close()

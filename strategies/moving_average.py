@@ -22,11 +22,11 @@ class MovingAverageCrossStrategy:
 
         alerts = []
         if prev is not None:
-            # Пересечение вверх (бычий сигнал)
             if prev < 0 and diff > 0:
+                # Пересечение вверх (бычий сигнал)
                 alerts.append({
                     "exchange": exchange,
-                    "pair": symbol,
+                    "symbol": symbol,
                     "old": old,
                     "new": current,
                     "diff": abs(diff),
@@ -34,11 +34,11 @@ class MovingAverageCrossStrategy:
                     "strategy": "MovingAverageCrossStrategy",
                     "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
                 })
-            # Пересечение вниз (медвежий сигнал)
             elif prev > 0 and diff < 0:
+                # Пересечение вниз (медвежий сигнал)
                 alerts.append({
                     "exchange": exchange,
-                    "pair": symbol,
+                    "symbol": symbol,
                     "old": old,
                     "new": current,
                     "diff": abs(diff),
